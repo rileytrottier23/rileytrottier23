@@ -3,7 +3,7 @@
 **Senior Product Manager @ Workday** — building AI agents for enterprise financial operations.
 Victoria, BC · [LinkedIn](https://www.linkedin.com/in/rileytrottier/)
 
-Before Workday I spent the better part of a decade shipping transaction-heavy platforms: transit payments at 10M+ user scale (Umo / Cubic Transportation Systems), a health-tech platform serving 15,000 veterans across Canada (WCG), and SaaS payments products for Canadian merchants (Zomaron → Paystone).
+Before Workday I spent the better part of a decade shipping transaction-heavy platforms: transit payments at 10M+ user scale (Umo / Cubic Transportation Systems), a health-tech platform serving 15,000 veterans across Canada (WCG), and SaaS payments products for Canadian merchants (Paystone). I am currently working on building deterministic workflows to guide agents in completing financial tasks in a regulatory environment. 
 
 I build the tooling I wish existed for shipping AI features — mostly around the question teams struggle most to answer: **"did this agent get better or worse?"**
 
