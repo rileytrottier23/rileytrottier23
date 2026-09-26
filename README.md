@@ -1,7 +1,7 @@
 # Riley Trottier
 
 **Senior Product Manager @ Workday** — building AI agents for enterprise financial operations.
-Victoria, BC · [LinkedIn](https://www.linkedin.com/in/rileytrottier/)
+Victoria, BC · [Website](https://personal-site-production-7acd.up.railway.app) · [LinkedIn](https://www.linkedin.com/in/rileytrottier/)
 
 Before Workday I spent the better part of a decade shipping transaction-heavy platforms: transit payments at 10M+ user scale (Umo / Cubic Transportation Systems), a health-tech platform serving 15,000 veterans across Canada (WCG), and SaaS payments products for Canadian merchants (Zomaron → Paystone).
 
@@ -33,9 +33,37 @@ PRD  ->  product-evaluator  ->  eval cases  ->  agent-eval-harness  ->  scorecar
 
 That loop — spec to test to number — is the thing I think most teams shipping AI features are missing.
 
-### [Riley-Claude-Skills](https://github.com/rileytrottier23/Riley-Claude-Skills)
+### Claude skill libraries
 
-The Claude skills I actually use day to day for PM work: PRD and spec writing, stakeholder decks, competitive research.
+The Claude skills I actually use day to day, split into three repos by domain: [Riley-PM-Skills](https://github.com/rileytrottier23/Riley-PM-Skills) (PRDs and specs, stakeholder decks, competitive research), [Riley-Coding-Skills](https://github.com/rileytrottier23/Riley-Coding-Skills) (engineering workflows) and [riley-thinking-skills](https://github.com/rileytrottier23/riley-thinking-skills) (decision reviews, reflection and practice partners). [Riley-Claude-Skills](https://github.com/rileytrottier23/Riley-Claude-Skills) is the hub that installs all of them.
+
+---
+
+## Apps I've built
+
+### [ReflectAI](https://github.com/rileytrottier23/ReflectAI)
+
+A journaling app: one entry a day with a 1–10 happiness score, and Claude writes monthly and yearly reports on the patterns in what you wrote. Live at [reflectai.net](https://reflectai.net). [Write-up](https://personal-site-production-7acd.up.railway.app/posts/building-reflectai/).
+
+`TypeScript`
+
+### [OnePage](https://github.com/rileytrottier23/OnePage)
+
+A task manager where everything happens on one screen, with AI-written monthly productivity reports. My first AI build. [Write-up](https://personal-site-production-7acd.up.railway.app/posts/onepage-lessons/).
+
+`TypeScript`
+
+### [journal-mcp-server](https://github.com/rileytrottier23/journal-mcp-server)
+
+A reference remote MCP server with OAuth 2.0 sign-in, extracted from ReflectAI, so Claude can read and write journal entries.
+
+`TypeScript`
+
+### [Personal-Site](https://github.com/rileytrottier23/Personal-Site)
+
+My [website and blog](https://personal-site-production-7acd.up.railway.app): Markdown posts in, static HTML out, hosted on Railway.
+
+`JavaScript`
 
 ---
 
@@ -56,4 +84,3 @@ The Claude skills I actually use day to day for PM work: PRD and spec writing, s
 ---
 
 riley.a.trottier@gmail.com
-
