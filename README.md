@@ -1,7 +1,7 @@
 # Riley Trottier
 
 **Senior Product Manager @ Workday** — building AI agents for enterprise financial operations.
-Victoria, BC · [Website](https://personal-site-production-7acd.up.railway.app) · [LinkedIn](https://www.linkedin.com/in/rileytrottier/)
+Victoria, BC · [Website](https://rileytrottier.com) · [LinkedIn](https://www.linkedin.com/in/rileytrottier/)
 
 Before Workday I spent the better part of a decade shipping transaction-heavy platforms: transit payments at 10M+ user scale (Umo / Cubic Transportation Systems), a health-tech platform serving 15,000 veterans across Canada (WCG), and SaaS payments products for Canadian merchants (Zomaron → Paystone).
 
@@ -43,13 +43,13 @@ The Claude skills I actually use day to day, split into three repos by domain: [
 
 ### [ReflectAI](https://github.com/rileytrottier23/ReflectAI)
 
-A journaling app: one entry a day with a 1–10 happiness score, and Claude writes monthly and yearly reports on the patterns in what you wrote. Live at [reflectai.net](https://reflectai.net). [Write-up](https://personal-site-production-7acd.up.railway.app/posts/building-reflectai/).
+A journaling app: one entry a day with a 1–10 happiness score, and Claude writes monthly and yearly reports on the patterns in what you wrote. Live at [reflectai.net](https://reflectai.net). [Write-up](https://rileytrottier.com/posts/building-reflectai/).
 
 `TypeScript`
 
 ### [OnePage](https://github.com/rileytrottier23/OnePage)
 
-A task manager where everything happens on one screen, with AI-written monthly productivity reports. My first AI build. [Write-up](https://personal-site-production-7acd.up.railway.app/posts/onepage-lessons/).
+A task manager where everything happens on one screen, with AI-written monthly productivity reports. My first AI build. [Write-up](https://rileytrottier.com/posts/onepage-lessons/).
 
 `TypeScript`
 
@@ -61,7 +61,7 @@ A reference remote MCP server with OAuth 2.0 sign-in, extracted from ReflectAI, 
 
 ### [Personal-Site](https://github.com/rileytrottier23/Personal-Site)
 
-My [website and blog](https://personal-site-production-7acd.up.railway.app): Markdown posts in, static HTML out, hosted on Railway.
+My [website and blog](https://rileytrottier.com): Markdown posts in, static HTML out, hosted on Railway.
 
 `JavaScript`
 
