@@ -1,86 +1,40 @@
 # Riley Trottier
 
-**Senior Product Manager @ Workday** — building AI agents for enterprise financial operations.
+Senior Product Manager at Workday, building AI agents for enterprise finance.
 Victoria, BC · [Website](https://rileytrottier.com) · [LinkedIn](https://www.linkedin.com/in/rileytrottier/)
 
-Before Workday I spent the better part of a decade shipping transaction-heavy platforms: transit payments at 10M+ user scale (Umo / Cubic Transportation Systems), a health-tech platform serving 15,000 veterans across Canada (WCG), and SaaS payments products for Canadian merchants (Zomaron → Paystone).
+Before Workday I worked on transit payments for 10M+ riders at Umo (Cubic Transportation Systems), a health platform serving 15,000 veterans across Canada at WCG, and payments for Canadian merchants at Zomaron (now Paystone).
 
-I build the tooling I wish existed for shipping AI features — mostly around the question teams struggle most to answer: **"did this agent get better or worse?"**
+Most of what's here comes back to one question teams shipping AI have trouble answering: did the agent get better or worse? I build tools that answer it with a number.
 
----
-
-## What I'm building
-
-### [agent-eval-harness](https://github.com/rileytrottier23/agent-eval-harness)
-
-The unit-tests-and-CI-report layer for AI agents. Runs a defined suite of cases against any agent behind a thin adapter and returns a scorecard: task success rate, cost, latency, and guardrail-violation rate — with per-case drill-down and run-over-run regression detection. Every run is stored immutably, so quality stops being a vibe and becomes a number you can diff.
-
-Targets a local function, the Anthropic API, or a live MCP server. Deterministic and LLM-judge grading. Ships a CI workflow and a Streamlit dashboard.
-
-`Python`
-
-### [product-evaluator](https://github.com/rileytrottier23/product-evaluator)
-
-Turns a PRD into a reviewable suite of structured eval cases. Three stages: extract requirements → review and edit → generate cases and export as YAML or JSON.
-
-`TypeScript`
-
-**These two are one pipeline.** They share an eval-case schema, so a written requirement becomes an executable test becomes a scorecard:
+## Start here
 
 ```
 PRD  ->  product-evaluator  ->  eval cases  ->  agent-eval-harness  ->  scorecard
 ```
 
-That loop — spec to test to number — is the thing I think most teams shipping AI features are missing.
+[product-evaluator](https://github.com/rileytrottier23/product-evaluator) reads a PRD, pulls out the testable requirements, lets you review them, then writes eval cases. [agent-eval-harness](https://github.com/rileytrottier23/agent-eval-harness) runs those cases against an agent and gives you a scorecard: success rate, cost, latency and guardrail violations, compared run to run. The two share one eval-case schema, so a requirement in a doc becomes a test you can run.
 
-### Claude skill libraries
+## Projects
 
-The Claude skills I actually use day to day, split into three repos by domain: [Riley-PM-Skills](https://github.com/rileytrottier23/Riley-PM-Skills) (PRDs and specs, stakeholder decks, competitive research), [Riley-Coding-Skills](https://github.com/rileytrottier23/Riley-Coding-Skills) (engineering workflows) and [riley-thinking-skills](https://github.com/rileytrottier23/riley-thinking-skills) (decision reviews, reflection and practice partners). [Riley-Claude-Skills](https://github.com/rileytrottier23/Riley-Claude-Skills) is the hub that installs all of them.
+| Project | What it is | Built with |
+|---|---|---|
+| [agent-eval-harness](https://github.com/rileytrottier23/agent-eval-harness) | Runs eval suites against any agent (a local function, the Claude API or a live MCP server) and flags regressions between runs | Python |
+| [product-evaluator](https://github.com/rileytrottier23/product-evaluator) | Turns a PRD into eval cases you review before they're generated | TypeScript |
+| [ReflectAI](https://github.com/rileytrottier23/ReflectAI) | Journaling app where Claude writes monthly reports on your entries. Live at [reflectai.net](https://reflectai.net) · [write-up](https://rileytrottier.com/posts/building-reflectai/) | TypeScript |
+| [journal-mcp-server](https://github.com/rileytrottier23/journal-mcp-server) | Remote MCP server with OAuth sign-in, pulled out of ReflectAI so Claude can read and write entries | TypeScript |
+| [OnePage](https://github.com/rileytrottier23/OnePage) | One-screen task manager with AI monthly reports. My first AI build · [write-up](https://rileytrottier.com/posts/onepage-lessons/) | TypeScript |
+| [Personal-Site](https://github.com/rileytrottier23/Personal-Site) | My [website and blog](https://rileytrottier.com) | JavaScript |
 
----
+## Claude skills
 
-## Apps I've built
+The skills I use every day, split into three repos: [PM](https://github.com/rileytrottier23/Riley-PM-Skills) (PRDs, stakeholder decks, competitive research), [coding](https://github.com/rileytrottier23/Riley-Coding-Skills) and [thinking](https://github.com/rileytrottier23/riley-thinking-skills) (decision reviews, reflection, practice). [Riley-Claude-Skills](https://github.com/rileytrottier23/Riley-Claude-Skills) installs all of them at once.
 
-### [ReflectAI](https://github.com/rileytrottier23/ReflectAI)
+## How I think about AI products
 
-A journaling app: one entry a day with a 1–10 happiness score, and Claude writes monthly and yearly reports on the patterns in what you wrote. Live at [reflectai.net](https://reflectai.net). [Write-up](https://rileytrottier.com/posts/building-reflectai/).
+- Quality has to be a number before you can manage it. "It feels worse this week" isn't something a team can fix.
+- Writing evals is product work. Picking the scenarios, the rubric and the ship bar are PM calls.
+- Keep guardrail failures in their own bucket. An agent that refunds outside policy failed differently from one that wrote a clunky sentence.
+- If I reuse a prompt every week, it should be a versioned skill in git, with evals once it matters.
 
-`TypeScript`
-
-### [OnePage](https://github.com/rileytrottier23/OnePage)
-
-A task manager where everything happens on one screen, with AI-written monthly productivity reports. My first AI build. [Write-up](https://rileytrottier.com/posts/onepage-lessons/).
-
-`TypeScript`
-
-### [journal-mcp-server](https://github.com/rileytrottier23/journal-mcp-server)
-
-A reference remote MCP server with OAuth 2.0 sign-in, extracted from ReflectAI, so Claude can read and write journal entries.
-
-`TypeScript`
-
-### [Personal-Site](https://github.com/rileytrottier23/Personal-Site)
-
-My [website and blog](https://rileytrottier.com): Markdown posts in, static HTML out, hosted on Railway.
-
-`JavaScript`
-
----
-
-## How I think about AI product work
-
-**Quality has to become a number before it can be managed.** Most teams know their agent "feels worse this week." Far fewer can say by how much, on which cases, or since which change. Everything here is aimed at closing that gap.
-
-**Eval design is a product skill, not an engineering one.** Choosing the scenarios, writing the rubric, and setting the ship threshold are product judgment calls that sit squarely with the PM. The pipeline that runs them is a solved problem now.
-
-**Most prompts should die. The ones that survive should become assets.** A prompt you retype every week is a routine you have not built yet. I run everything I reuse through the same progression: one-off prompt → repeated workflow → versioned skill → skill with evals attached → something a team can share. Each step has to be earned. If a skill cannot pass its own evals, it does not get promoted.
-
-**Working AI processes should be committed, not remembered.** Skills, rubrics, and eval criteria drift exactly the way code drifts, and when output quality drops the first question is always the same: did the model change, or did I? Version control answers it. The diff on an eval-criteria file is the difference between a regression and a deliberately raised bar — two situations that look identical on a dashboard and call for opposite responses. That is why my skills and eval suites live in git rather than buried in a chat history.
-
-**Build the loop, not the output.** The valuable artifact is rarely the document or the agent. It is the loop that improves it: run, score, diff, keep or revert, commit. Once that loop exists and its history is stored, quality compounds without a human in the middle of every iteration. The commit log becomes the experiment log.
-
-**Guardrail failures should not be averaged away.** An agent that issues a refund outside policy has failed differently than one that gave a slightly unhelpful answer. Scoring them in the same bucket hides the failure that actually matters.
-
----
-
-riley.a.trottier@gmail.com
+I write about this at [rileytrottier.com](https://rileytrottier.com). Always happy to compare notes with other PMs building with AI - riley.a.trottier@gmail.com
