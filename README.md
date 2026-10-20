@@ -5,22 +5,12 @@ Victoria, BC · [Website](https://rileytrottier.com) · [LinkedIn](https://www.l
 
 Before Workday I worked on transit payments for 10M+ riders at Umo (Cubic Transportation Systems), a health platform serving 15,000 veterans across Canada at WCG, and payments for Canadian merchants at Zomaron (now Paystone).
 
-Most of what's here comes back to one question teams shipping AI have trouble answering: did the agent get better or worse? I build tools that answer it with a number.
-
-## Start here
-
-```
-PRD  ->  product-evaluator  ->  eval cases  ->  agent-eval-harness  ->  scorecard
-```
-
-[product-evaluator](https://github.com/rileytrottier23/product-evaluator) reads a PRD, pulls out the testable requirements, lets you review them, then writes eval cases. [agent-eval-harness](https://github.com/rileytrottier23/agent-eval-harness) runs those cases against an agent and gives you a scorecard: success rate, cost, latency and guardrail violations, compared run to run. The two share one eval-case schema, so a requirement in a doc becomes a test you can run.
+These are things I've built on my own time to learn how AI products work in practice.
 
 ## Projects
 
 | Project | What it is | Built with |
 |---|---|---|
-| [agent-eval-harness](https://github.com/rileytrottier23/agent-eval-harness) | Runs eval suites against any agent (a local function, the Claude API or a live MCP server) and flags regressions between runs | Python |
-| [product-evaluator](https://github.com/rileytrottier23/product-evaluator) | Turns a PRD into eval cases you review before they're generated | TypeScript |
 | [ReflectAI](https://github.com/rileytrottier23/ReflectAI) | Journaling app where Claude writes monthly reports on your entries. Live at [reflectai.net](https://reflectai.net) · [write-up](https://rileytrottier.com/posts/building-reflectai/) | TypeScript |
 | [journal-mcp-server](https://github.com/rileytrottier23/journal-mcp-server) | Remote MCP server with OAuth sign-in, pulled out of ReflectAI so Claude can read and write entries | TypeScript |
 | [OnePage](https://github.com/rileytrottier23/OnePage) | One-screen task manager with AI monthly reports. My first AI build · [write-up](https://rileytrottier.com/posts/onepage-lessons/) | TypeScript |
