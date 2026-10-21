@@ -5,7 +5,7 @@ Victoria, BC · [Website](https://rileytrottier.com) · [LinkedIn](https://www.l
 
 Before Workday I worked on transit payments for 10M+ riders at Umo (Cubic Transportation Systems), a health platform serving 15,000 veterans across Canada at WCG, and payments for Canadian merchants at Zomaron (now Paystone).
 
-These are things I've built on my own time to learn how AI products work in practice.
+Outside work I build and ship my own AI apps and tools. Everything below is live or installable.
 
 ## Projects
 
