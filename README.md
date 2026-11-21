@@ -20,11 +20,11 @@ Outside work I build and ship my own AI apps and tools. Everything below is live
 
 The skills I use every day, split into three repos: [PM](https://github.com/rileytrottier23/Riley-PM-Skills) (PRDs, stakeholder decks, competitive research), [coding](https://github.com/rileytrottier23/Riley-Coding-Skills) and [thinking](https://github.com/rileytrottier23/riley-thinking-skills) (decision reviews, reflection, practice). [Riley-Claude-Skills](https://github.com/rileytrottier23/Riley-Claude-Skills) installs all of them at once.
 
-## How I think about AI products
+## How I build with AI
 
-- Quality has to be a number before you can manage it. "It feels worse this week" isn't something a team can fix.
-- Writing evals is product work. Picking the scenarios, the rubric and the ship bar are PM calls.
-- Keep guardrail failures in their own bucket. An agent that refunds outside policy failed differently from one that wrote a clunky sentence.
-- If I reuse a prompt every week, it should be a versioned skill in git, with evals once it matters.
+- In finance software every number has to be explainable, so I let the model read the messy input and propose a plan, and plain code does the math and checks the result. [Probabilistic Planner, Deterministic Executor](https://rileytrottier.com/posts/probabilistic-planner-deterministic-executor/)
+- My AI assistant works under written rules, like placeholders instead of invented numbers and drafts only for anything shared, and each rule has a check behind it. [Guardrails for an AI Assistant](https://rileytrottier.com/posts/guardrails-for-my-ai-assistant/)
+- Prompts I reuse become skill files in git with version numbers, so I can tell which version produced an output. [Building an AI Skills Library](https://rileytrottier.com/posts/library-of-ai-skills/)
+- [journal-mcp-server](https://github.com/rileytrottier23/journal-mcp-server) gives Claude a narrow tool for each job: search entries, pull up a day, or summarize happiness scores over a date range. It's also where I'm building test cases that check whether an agent uses those tools correctly.
 
 I write about this at [rileytrottier.com](https://rileytrottier.com). Always happy to compare notes with other PMs building with AI - riley.a.trottier@gmail.com
